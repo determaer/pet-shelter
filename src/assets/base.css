@@ -1,0 +1,112 @@
+@import "variables.css";
+.button {
+  color: var(--color-dark-3xl);
+  border-radius: 100px;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+}
+
+.button-secondary {
+  background-color: var(--color-light-xl);
+}
+
+.button-large {
+  padding: 15px 45px;
+}
+
+.button-short {
+  padding: 23px 19px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:active {
+  background-color: var(--color-primary);
+}
+
+.h2 {
+  font-family: "Georgia";
+  font-size: 44px;
+  line-height: 130%;
+  letter-spacing: normal;
+}
+
+.h3 {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 6%;
+}
+
+.h3-mobile {
+  font-family: "Georgia";
+  font-size: 25px;
+  line-height: 130%;
+  letter-spacing: 6%;
+}
+
+.h4 {
+  font-family: "Georgia";
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 6%;
+}
+
+.h5 {
+  font-family: "Georgia";
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 6%;
+}
+
+.h5-window {
+  font-family: "Georgia";
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 6%;
+}
+
+.p-l {
+  font-family: "Arial";
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0px;
+}
+
+.p-s {
+  font-family: "Arial";
+  font-style: italic;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.p-mobile-menu {
+  font-family: "Arial";
+  font-size: 32px;
+  line-height: 160%;
+  letter-spacing: 0px;
+}
+
+.logo-title {
+  font-family: "Georgia";
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 6%;
+}
+
+.logo-subtitle {
+  font-family: "Arial";
+  font-size: 44px;
+  line-height: 130%;
+  letter-spacing: normal;
+}
