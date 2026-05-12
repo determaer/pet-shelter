@@ -4,11 +4,7 @@
   width: fit-content;
   border-radius: 100px;
   border: 0px;
-  font-family: Georgia;
-  font-size: 17px;
-  line-height: 130%;
-  letter-spacing: 6%;
-  font-weight: normal;
+  max-height: 52px;
 }
 
 .button-primary {
@@ -16,16 +12,23 @@
 }
 
 .button-secondary {
-  background-color: var(--color-light-xl);
+  background: none;
   outline: 2px solid var(--color-primary);
 }
 
 .button-large {
   padding: 15px 45px;
+  font-family: Georgia;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 6%;
+  font-weight: normal;
 }
 
 .button-short {
-  padding: 23px 19px;
+  padding: 18px 19px;
+  min-width: 52px;
+  max-width: 52px;
 }
 
 .button:hover {

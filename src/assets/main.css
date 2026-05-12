@@ -111,3 +111,32 @@
 .main-page__about-content-text {
   color: var(--color-dark-xl);
 }
+
+/* main page pets section */
+
+.main-page__pets {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  padding: 80px 40px 100px;
+  background-color: var(--color-light-l);
+  align-items: center;
+}
+
+.main-page__pets-header {
+  text-align: center;
+  max-width: 400px;
+  color: var(--color-dark-l);
+}
+
+.main-page__pets-slider-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-page__pets-slider {
+  display: flex;
+  gap: 90px;
+}
