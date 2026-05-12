@@ -6,6 +6,8 @@
   padding: 0;
 }
 
+/*main page start screen*/
+
 .main-page__hero {
   padding: 30px 40px 0px 40px;
   display: flex;
@@ -83,4 +85,29 @@
 
 .main-page__hero-content-description {
   color: var(--color-dark-s);
+}
+
+/* main page about section */
+
+.main-page__about {
+  background-color: var(--color-light-xl);
+  padding: 80px 40px 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-page__about-content {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main-page__about-content-header {
+  max-width: 370px;
+  color: var(--color-dark-l);
+}
+
+.main-page__about-content-text {
+  color: var(--color-dark-xl);
 }
