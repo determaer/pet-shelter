@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="src/assets/main.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <section id="hero" class="main-page__hero">
+      <header class="main-page__hero-header">
+        <strong class="main-page__hero-header-logo">
+          <p class="logo-title main-page__hero-header-logo-title">Cozy House</p>
+          <span class="logo-subtitle main-page__hero-header-logo-subtitle"
+            >Shelter for pets in Boston</span
+          >
+        </strong>
+
+        <nav class="main-page__hero-nav">
+          <a class="p-l main-page__hero-nav-link">About the shelter</a>
+          <a class="p-l main-page__hero-nav-link">Our pets</a>
+          <a class="p-l main-page__hero-nav-link">Help the shelter</a>
+          <a class="p-l main-page__hero-nav-link">Contacts</a>
+        </nav>
+      </header>
+      <div class="main-page__hero-start">
+        <div class="main-page__hero-content">
+          <h2 class="h2 main-page__hero-content-greeting">
+            Not only people need a house
+          </h2>
+          <p class="p-l main-page__hero-content-description">
+            We offer to give a chance to a little and nice puppy with an
+            extremely wide and open heart. He or she will love you more than
+            anybody else in the world, you will see!
+          </p>
+          <button class="button button-primary button-large">
+            Make a friend
+          </button>
+        </div>
+        <img src="src/assets/start-screen-puppy.png" alt="Puppy start screen" />
+      </div>
+    </section>
+    <main>
+      <section id="about"></section>
+      <section id="pets"></section>
+      <section id="help"></section>
+      <section id="donation"></section>
+    </main>
+    <footer></footer>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
