@@ -1,0 +1,50 @@
+@import "base.css";
+
+/*pets page header*/
+
+.pets-page__header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pets-page__header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: normal;
+}
+
+.pets-page__header-logo-title {
+  color: var(--color-primary);
+}
+
+.pets-page__header-logo-subtitle {
+  text-align: center;
+  color: var(--color-light-xl);
+}
+
+.pets-page__nav {
+  display: flex;
+  gap: 35px;
+  padding: 16px 0 20px;
+}
+
+.pets-page__nav-link {
+  color: var(--color-dark-s);
+}
+
+.pets-page__nav-link-selected {
+  position: relative;
+  color: var(--color-light-xl);
+}
+
+.pets-page__nav-link-selected::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+}

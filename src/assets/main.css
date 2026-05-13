@@ -1,11 +1,5 @@
 @import "base.css";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /*main page start screen*/
 
 .main-page__hero {
@@ -212,63 +206,4 @@
 
 .main-page__donation-legal-info {
   color: var(--color-dark-m);
-}
-
-/* main page footer */
-
-.main-page__footer {
-  padding: 40px 40px 0;
-  max-height: 350px;
-  display: flex;
-  justify-content: space-between;
-  background: var(--footer-gradient-background);
-}
-
-.main-page__footer-content {
-  display: grid;
-  padding: 16px 0 60px;
-  grid-template-areas:
-    "c_title a_title"
-    "email boston"
-    "phone london";
-  grid-template-rows: auto repeat(2, minmax(30px, 90px));
-  grid-template-columns: minmax(30px, 280px) minmax(30px, 300px);
-  row-gap: 35px;
-  column-gap: 160px;
-}
-
-.main-page__footer-text {
-  display: flex;
-  align-items: center;
-  color: var(--color-primary);
-  gap: 20px;
-}
-
-.main-page__footer-title {
-  max-width: 280px;
-  color: var(--color-light-xl);
-}
-
-.main-page__footer-contacts-title {
-  grid-area: c_title;
-}
-
-.main-page__footer-address-title {
-  grid-area: a_title;
-}
-
-.main-page__footer-email {
-  grid-area: email;
-}
-
-.main-page__footer-phone {
-  grid-area: phone;
-}
-
-.main-page__footer-boston {
-  grid-area: boston;
-}
-
-.main-page__footer-london {
-  grid-area: london;
 }
