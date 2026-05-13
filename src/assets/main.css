@@ -175,3 +175,41 @@
   max-width: 60px;
   max-height: 60px;
 }
+
+/* main page donation section */
+
+.main-page__donation {
+  padding: 80px 180px 100px;
+  display: flex;
+  background-color: var(--color-light-l);
+  gap: 30px;
+}
+
+.main-page__donation-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  gap: 30px;
+}
+
+.main-page__donation-header {
+  color: var(--color-dark-l);
+}
+
+.main-page__donation-bank-name {
+  color: var(--color-dark-l);
+}
+
+.main-page__donation-credit-card {
+  display: flex;
+  width: fit-content;
+  gap: 15px;
+  padding: 10px 15px;
+  color: var(--color-dark-l);
+  background-color: var(--color-primary);
+  border-radius: 9px;
+}
+
+.main-page__donation-legal-info {
+  color: var(--color-dark-m);
+}
