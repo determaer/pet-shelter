@@ -16,16 +16,60 @@
       </strong>
 
       <nav class="pets-page__nav">
-        <a class="p-l pets-page__nav-link-selected" href="/index.html"
+        <a class="p-l pets-page__nav-link" href="/index.html"
           >About the shelter</a
         >
-        <a class="p-l pets-page__nav-link">Our pets</a>
+        <a class="p-l pets-page__nav-link-selected">Our pets</a>
         <a class="p-l pets-page__nav-link">Help the shelter</a>
         <a class="p-l pets-page__nav-link">Contacts</a>
       </nav>
     </header>
 
-    <main></main>
+    <main class="pets-page__pets">
+      <h3 class="h3 pets-page__pets-header">
+        Our friends who<br />
+        are looking for a house
+      </h3>
+      <div class="pets-page__pets-table">
+        <pet-card
+          name="Katrine"
+          img-url="./src/assets/pets-katrine.png"
+        ></pet-card>
+        <pet-card
+          name="Jennifer"
+          img-url="./src/assets/pets-jennifer.png"
+        ></pet-card>
+        <pet-card name="Woody" img-url="./src/assets/pets-woody.png"></pet-card>
+        <pet-card
+          name="Sophia"
+          img-url="./src/assets/pets-sophia.png"
+        ></pet-card>
+        <pet-card name="Timmy" img-url="./src/assets/pets-timmy.png"></pet-card>
+        <pet-card
+          name="Charly"
+          img-url="./src/assets/pets-charly.png"
+        ></pet-card>
+        <pet-card
+          name="Scarlett"
+          img-url="./src/assets/pets-scarlett.png"
+        ></pet-card>
+        <pet-card
+          name="Freddie"
+          img-url="./src/assets/pets-freddie.png"
+        ></pet-card>
+      </div>
+      <div class="pets-page__pets-pagination">
+        <button disabled class="button button-secondary button-short">
+          &lt&lt
+        </button>
+        <button disabled class="button button-secondary button-short">
+          &lt
+        </button>
+        <button class="button button-primary button-short">1</button>
+        <button class="button button-secondary button-short">&gt&gt</button>
+        <button class="button button-secondary button-short">&gt</button>
+      </div>
+    </main>
     <footer class="footer">
       <div class="footer-content">
         <h3 class="h3 footer-contacts-title footer-title">

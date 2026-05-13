@@ -40,9 +40,15 @@ img {
 }
 
 .button-short {
-  padding: 18px 19px;
-  min-width: 52px;
-  max-width: 52px;
+  --size: 52px;
+  min-width: var(--size);
+  max-width: var(--size);
+  min-height: var(--size);
+  max-height: var(--size);
+}
+
+.button-short svg {
+  vertical-align: center;
 }
 
 .button:hover {
@@ -50,12 +56,22 @@ img {
   background-color: var(--color-primary-light);
 }
 
-.button:disabled {
-  cursor: not-allowed;
+.button-secondary:hover {
+  outline-color: var(--color-primary-light);
 }
 
 .button:active {
   background-color: var(--color-primary);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button-secondary:disabled {
+  color: var(--color-dark-s);
+  outline-color: var(--color-dark-s);
+  background: none;
 }
 
 .h2 {
