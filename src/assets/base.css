@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: url(cursor/default.svg), auto;
 }
 
 a {
@@ -52,7 +53,7 @@ img {
 }
 
 .button:hover {
-  cursor: pointer;
+  cursor: url(cursor/pointer.svg), auto;
   background-color: var(--color-primary-light);
 }
 
@@ -65,7 +66,9 @@ img {
 }
 
 .button:disabled {
-  cursor: not-allowed;
+  cursor:
+    url(cursor/not-allowed.svg) 3 3,
+    auto;
 }
 
 .button-secondary:disabled {
