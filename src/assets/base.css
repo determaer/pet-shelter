@@ -175,21 +175,15 @@ img {
   padding: 40px 40px 0;
   max-height: 350px;
   display: flex;
-  justify-content: space-between;
   background: var(--footer-gradient-background);
+  justify-content: center;
+  gap: 160px;
 }
 
 .footer-content {
-  display: grid;
+  display: flex;
   padding: 16px 0 60px;
-  grid-template-areas:
-    "c_title a_title"
-    "email boston"
-    "phone london";
-  grid-template-rows: auto repeat(2, minmax(30px, 90px));
-  grid-template-columns: minmax(30px, 280px) minmax(30px, 300px);
-  row-gap: 35px;
-  column-gap: 160px;
+  gap: 160px;
 }
 
 .footer-text {
@@ -204,28 +198,13 @@ img {
   color: var(--color-light-xl);
 }
 
-.footer-contacts-title {
-  grid-area: c_title;
-}
-
-.footer-address-title {
-  grid-area: a_title;
-}
-
-.footer-email {
-  grid-area: email;
-}
-
-.footer-phone {
-  grid-area: phone;
-}
-
-.footer-boston {
-  grid-area: boston;
-}
-
-.footer-london {
-  grid-area: london;
+.footer-content__contacts,
+.footer-content__locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+  max-width: 300px;
 }
 
 /* common mobile menu */
