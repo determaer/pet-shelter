@@ -1,7 +1,25 @@
 @import "variables.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: url(cursor/default.svg), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: scale-down;
+}
+
 .button {
   color: var(--color-dark-3xl);
+  width: fit-content;
   border-radius: 100px;
+  border: 0px;
+  max-height: 52px;
 }
 
 .button-primary {
@@ -9,31 +27,59 @@
 }
 
 .button-secondary {
-  background-color: var(--color-light-xl);
+  background: none;
+  outline: 2px solid var(--color-primary);
 }
 
 .button-large {
   padding: 15px 45px;
+  font-family: Georgia;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 6%;
+  font-weight: normal;
 }
 
 .button-short {
-  padding: 23px 19px;
+  --size: 52px;
+  min-width: var(--size);
+  max-width: var(--size);
+  min-height: var(--size);
+  max-height: var(--size);
+}
+
+.button-short svg {
+  vertical-align: center;
 }
 
 .button:hover {
-  cursor: pointer;
+  cursor: url(cursor/pointer.svg), auto;
+  background-color: var(--color-primary-light);
 }
 
-.button:disabled {
-  cursor: not-allowed;
+.button-secondary:hover {
+  outline-color: var(--color-primary-light);
 }
 
 .button:active {
   background-color: var(--color-primary);
 }
 
+.button:disabled {
+  cursor:
+    url(cursor/not-allowed.svg) 3 3,
+    auto;
+}
+
+.button-secondary:disabled {
+  color: var(--color-dark-s);
+  outline-color: var(--color-dark-s);
+  background: none;
+}
+
 .h2 {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 44px;
   line-height: 130%;
   letter-spacing: normal;
@@ -41,6 +87,7 @@
 
 .h3 {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 6%;
@@ -48,6 +95,7 @@
 
 .h3-mobile {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 25px;
   line-height: 130%;
   letter-spacing: 6%;
@@ -55,6 +103,7 @@
 
 .h4 {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 6%;
@@ -62,6 +111,7 @@
 
 .h5 {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 15px;
   line-height: 110%;
   letter-spacing: 6%;
@@ -77,6 +127,7 @@
 
 .p-l {
   font-family: "Arial";
+  font-weight: normal;
   font-size: 15px;
   line-height: 160%;
   letter-spacing: 0px;
@@ -84,6 +135,7 @@
 
 .p-s {
   font-family: "Arial";
+  font-weight: normal;
   font-style: italic;
   font-size: 12px;
   line-height: 150%;
@@ -92,6 +144,7 @@
 
 .p-mobile-menu {
   font-family: "Arial";
+  font-weight: normal;
   font-size: 32px;
   line-height: 160%;
   letter-spacing: 0px;
@@ -99,6 +152,7 @@
 
 .logo-title {
   font-family: "Georgia";
+  font-weight: normal;
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 6%;
@@ -106,7 +160,65 @@
 
 .logo-subtitle {
   font-family: "Arial";
-  font-size: 44px;
-  line-height: 130%;
-  letter-spacing: normal;
+  font-size: 13px;
+  letter-spacing: 10%;
+}
+
+/* common footer */
+
+.footer {
+  padding: 40px 40px 0;
+  max-height: 350px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--footer-gradient-background);
+}
+
+.footer-content {
+  display: grid;
+  padding: 16px 0 60px;
+  grid-template-areas:
+    "c_title a_title"
+    "email boston"
+    "phone london";
+  grid-template-rows: auto repeat(2, minmax(30px, 90px));
+  grid-template-columns: minmax(30px, 280px) minmax(30px, 300px);
+  row-gap: 35px;
+  column-gap: 160px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  gap: 20px;
+}
+
+.footer-title {
+  max-width: 280px;
+  color: var(--color-light-xl);
+}
+
+.footer-contacts-title {
+  grid-area: c_title;
+}
+
+.footer-address-title {
+  grid-area: a_title;
+}
+
+.footer-email {
+  grid-area: email;
+}
+
+.footer-phone {
+  grid-area: phone;
+}
+
+.footer-boston {
+  grid-area: boston;
+}
+
+.footer-london {
+  grid-area: london;
 }

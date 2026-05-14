@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="src/assets/our-pets.css" />
+  </head>
+  <body>
+    <header class="pets-page__header">
+      <strong class="pets-page__header-logo">
+        <p class="logo-title pets-page__header-logo-title">Cozy House</p>
+        <span class="logo-subtitle pets-page__header-logo-subtitle"
+          >Shelter for pets in Boston</span
+        >
+      </strong>
+
+      <nav class="pets-page__nav">
+        <a class="p-l pets-page__nav-link" href="/index.html"
+          >About the shelter</a
+        >
+        <a class="p-l pets-page__nav-link-selected">Our pets</a>
+        <a class="p-l pets-page__nav-link">Help the shelter</a>
+        <a class="p-l pets-page__nav-link">Contacts</a>
+      </nav>
+    </header>
+
+    <main class="pets-page__pets">
+      <h3 class="h3 pets-page__pets-header">
+        Our friends who<br />
+        are looking for a house
+      </h3>
+      <div class="pets-page__pets-table">
+        <pet-card
+          name="Katrine"
+          img-url="./src/assets/pets-katrine.png"
+        ></pet-card>
+        <pet-card
+          name="Jennifer"
+          img-url="./src/assets/pets-jennifer.png"
+        ></pet-card>
+        <pet-card name="Woody" img-url="./src/assets/pets-woody.png"></pet-card>
+        <pet-card
+          name="Sophia"
+          img-url="./src/assets/pets-sophia.png"
+        ></pet-card>
+        <pet-card name="Timmy" img-url="./src/assets/pets-timmy.png"></pet-card>
+        <pet-card
+          name="Charly"
+          img-url="./src/assets/pets-charly.png"
+        ></pet-card>
+        <pet-card
+          name="Scarlett"
+          img-url="./src/assets/pets-scarlett.png"
+        ></pet-card>
+        <pet-card
+          name="Freddie"
+          img-url="./src/assets/pets-freddie.png"
+        ></pet-card>
+      </div>
+      <div class="pets-page__pets-pagination">
+        <button disabled class="button button-secondary button-short">
+          &lt&lt
+        </button>
+        <button disabled class="button button-secondary button-short">
+          &lt
+        </button>
+        <button class="button button-primary button-short">1</button>
+        <button class="button button-secondary button-short">&gt&gt</button>
+        <button class="button button-secondary button-short">&gt</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <h3 class="h3 footer-contacts-title footer-title">
+          For questions and suggestions
+        </h3>
+        <div class="footer-email footer-text">
+          <img src="src/assets/icons/icon-email.svg" alt="email" />
+          <address class="h4">email@shelter.com</address>
+        </div>
+        <div class="footer-phone footer-text">
+          <img src="src/assets/icons/icon-phone.svg" alt="phone" />
+          <address class="h4">+13 674 567 75 54</address>
+        </div>
+        <h3 class="h3 footer-address-title footer-title">
+          We are waiting for your visit
+        </h3>
+        <div class="footer-boston footer-text">
+          <img src="src/assets/icons/icon-marker.svg" alt="address" />
+          <address class="h4">
+            1 Central Street, Boston (entrance from the store)
+          </address>
+        </div>
+        <div class="footer-london footer-text">
+          <img src="src/assets/icons/icon-marker.svg" alt="address" />
+          <address class="h4">18 South Park, London</address>
+        </div>
+      </div>
+
+      <img
+        class="footer-image"
+        src="src/assets/footer-puppy.png"
+        alt="puppy picture"
+      />
+    </footer>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
