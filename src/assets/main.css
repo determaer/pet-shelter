@@ -39,6 +39,10 @@
   padding: 16px 0 20px;
 }
 
+.main-page__hero-nav-toggle {
+  display: none;
+}
+
 .main-page__hero-nav-link {
   color: var(--color-dark-s);
 }
@@ -232,5 +236,22 @@
 
   .main-page__hero-content button {
     align-self: center;
+  }
+}
+
+/* main page header nav panel */
+@media (max-width: 700px) {
+  .main-page__hero-nav {
+    display: none;
+  }
+
+  .main-page__hero-nav-toggle {
+    display: initial;
+    background: none;
+    border: 0;
+  }
+
+  .main-page__hero-nav-toggle:hover * {
+    cursor: url(cursor/pointer.svg), auto;
   }
 }

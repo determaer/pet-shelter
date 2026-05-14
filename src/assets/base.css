@@ -224,3 +224,76 @@ img {
 .footer-london {
   grid-area: london;
 }
+
+/* common mobile menu */
+
+body:has(.popover:popover-open) {
+  overflow: hidden;
+}
+
+body:has(.popover:popover-open) :is(#main-page, footer) {
+  display: none;
+}
+
+.popover {
+  overscroll-behavior: contain;
+}
+
+.popover:popover-open {
+  left: 100%;
+  transform: translateX(-100%);
+  width: 320px;
+  max-width: 320px;
+  background-color: var(--color-dark-3xl);
+  border: 0px;
+  height: 100vh;
+  overscroll-behavior: contain;
+}
+
+.popover::backdrop {
+  background-color: var(--color-dark-3xl);
+  opacity: 60%;
+  overscroll-behavior: contain;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.popover__header {
+  margin: 30px 30px 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+}
+
+.popover__nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.popover__nav-link {
+  text-align: center;
+  color: var(--color-dark-s);
+  width: fit-content;
+}
+
+.popover__nav-link-selected {
+  position: relative;
+  color: var(--color-light-s);
+}
+
+.popover__nav-link-selected::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+}

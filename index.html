@@ -24,6 +24,22 @@
           <a class="p-l main-page__hero-nav-link">Help the shelter</a>
           <a class="p-l main-page__hero-nav-link">Contacts</a>
         </nav>
+        <button
+          class="main-page__hero-nav-toggle"
+          popovertarget="nav-panel-popover"
+        >
+          <svg
+            width="30"
+            height="22"
+            viewBox="0 0 30 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
+            <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
+            <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
+          </svg>
+        </button>
       </header>
       <div class="main-page__hero-start">
         <div class="main-page__hero-content">
@@ -42,7 +58,39 @@
         <img src="src/assets/start-screen-puppy.png" alt="Puppy start screen" />
       </div>
     </section>
-    <main>
+
+    <div id="nav-panel-popover" popover class="popover">
+      <header class="popover__header">
+        <button
+          class="main-page__hero-nav-toggle"
+          popovertarget="nav-panel-popover"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="24" y1="30" x2="24" stroke="#F1CDB3" stroke-width="2" />
+            <line x1="14" y1="30" x2="14" stroke="#F1CDB3" stroke-width="2" />
+            <line x1="4" y1="30" x2="4" stroke="#F1CDB3" stroke-width="2" />
+          </svg>
+        </button>
+      </header>
+      <nav class="popover__nav">
+        <a class="p-mobile-menu popover__nav-link popover__nav-link-selected"
+          >About the shelter</a
+        >
+        <a class="p-mobile-menu popover__nav-link" href="/our-pets.html"
+          >Our pets</a
+        >
+        <a class="p-mobile-menu popover__nav-link">Help the shelter</a>
+        <a class="p-mobile-menu popover__nav-link">Contacts</a>
+      </nav>
+    </div>
+
+    <main id="main-page">
       <section id="about" class="main-page__about">
         <img
           loading="lazy"
