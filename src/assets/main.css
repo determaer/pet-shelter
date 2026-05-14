@@ -255,3 +255,29 @@
     cursor: url(cursor/pointer.svg), auto;
   }
 }
+
+@media (max-width: 320px) {
+  .main-page__hero {
+    padding: 30px 10px 0;
+  }
+
+  .main-page__hero-header {
+    padding: 0 10px;
+  }
+
+  .main-page__hero-start {
+    gap: 105px;
+  }
+
+  .main-page__hero-content {
+    max-width: 300px;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-page__hero-start img {
+    width: 87%;
+    align-self: center;
+  }
+}

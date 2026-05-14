@@ -95,12 +95,15 @@ img {
   letter-spacing: 6%;
 }
 
-.h3-mobile {
-  font-family: "Georgia";
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 130%;
-  letter-spacing: 6%;
+@media (max-width: 375px) {
+  .h2,
+  .h3 {
+    font-family: "Georgia";
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 6%;
+  }
 }
 
 .h4 {
