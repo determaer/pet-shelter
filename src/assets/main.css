@@ -179,10 +179,17 @@
 /* main page donation section */
 
 .main-page__donation {
-  padding: 80px 180px 100px;
+  padding: 80px 0px 100px;
   display: flex;
   background-color: var(--color-light-l);
   gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page__donation-image {
+  width: 100%;
+  max-width: 505px;
 }
 
 .main-page__donation-text {
@@ -203,6 +210,7 @@
 .main-page__donation-credit-card {
   display: flex;
   width: fit-content;
+  min-width: 281px;
   gap: 15px;
   padding: 10px 15px;
   color: var(--color-dark-l);
@@ -219,6 +227,10 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 60px;
+  }
+
+  .main-page__donation {
+    flex-direction: column-reverse;
   }
 }
 
@@ -282,6 +294,32 @@
   .main-page__help-icons {
     grid-template-columns: repeat(2, auto);
     gap: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-page__donation {
+    padding: 42px 20px;
+  }
+  .main-page__donation-text {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .main-page__donation-credit-card .h4 {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 6%;
+  }
+
+  .main-page__donation-bank-name {
+    line-height: 160%;
+    letter-spacing: 0;
+  }
+
+  .main-page__donation-legal-info {
+    text-align: justify;
   }
 }
 
