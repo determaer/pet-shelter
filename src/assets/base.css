@@ -112,6 +112,7 @@ img {
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 6%;
+  font-style: normal;
 }
 
 .h5 {
@@ -173,17 +174,21 @@ img {
 
 .footer {
   padding: 40px 40px 0;
-  max-height: 350px;
   display: flex;
+  flex-wrap: wrap;
   background: var(--footer-gradient-background);
   justify-content: center;
-  gap: 160px;
+  column-gap: 160px;
+  row-gap: 65px;
 }
 
 .footer-content {
   display: flex;
-  padding: 16px 0 60px;
-  gap: 160px;
+  padding-top: 16px;
+  row-gap: 40px;
+  column-gap: 12vw;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-text {
@@ -205,6 +210,39 @@ img {
   justify-content: space-between;
   height: 234px;
   max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 40px 0;
+  }
+
+  .footer-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    padding: 30px 0 0;
+    row-gap: 40px;
+  }
+
+  .footer-content {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .footer-content__contacts,
+  .footer-content__locations {
+    height: auto;
+    gap: 40px;
+  }
+
+  .footer-image {
+    width: 100%;
+    padding: 0 30px;
+  }
 }
 
 /* common mobile menu */
