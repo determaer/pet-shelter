@@ -220,6 +220,7 @@
   color: var(--color-dark-l);
   background-color: var(--color-primary);
   border-radius: 9px;
+  white-space: nowrap;
 }
 
 .main-page__donation-legal-info {
