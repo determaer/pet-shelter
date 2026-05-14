@@ -237,6 +237,31 @@
   .main-page__hero-content button {
     align-self: center;
   }
+
+  /* main page about section */
+  .main-page__about {
+    padding: 80px 0 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .main-page__about-content {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .main-page__about-content-header {
+    max-width: 370px;
+    color: var(--color-dark-l);
+  }
+
+  .main-page__about-content-text {
+    color: var(--color-dark-xl);
+  }
 }
 
 /* main page header nav panel */
