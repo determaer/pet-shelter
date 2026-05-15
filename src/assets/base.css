@@ -279,6 +279,16 @@ body:has(.popover:popover-open) :is(#main-page, footer) {
   pointer-events: none;
 }
 
+.popover__close-button {
+  display: initial;
+  background: none;
+  border: 0;
+}
+
+.popover__close-button * {
+  cursor: url(cursor/pointer.svg), auto;
+}
+
 .popover__header {
   margin: 30px 30px 10px 0;
   display: flex;
