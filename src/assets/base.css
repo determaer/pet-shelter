@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: url(cursor/pointer.svg), auto;
+}
+
 img {
   object-fit: contain;
   width: fit-content;
