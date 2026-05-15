@@ -6,6 +6,10 @@
   cursor: url(cursor/default.svg), auto;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
