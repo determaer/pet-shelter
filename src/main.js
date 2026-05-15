@@ -1,9 +1,5 @@
 class PetCard extends HTMLElement {
-  static get observedAttributes() {
-    return ["name", "type", "description", "img-url"];
-  }
-
-  connectedCallback() {
+  render() {
     const name = this.getAttribute("name") || "Имя не указано";
     const type = this.getAttribute("type") || "type не указано";
     const description =
@@ -54,6 +50,43 @@ class PetCard extends HTMLElement {
         </dialog>
     `;
   }
+
+  static get observedAttributes() {
+    return ["name", "type", "description", "img-url"];
+  }
+
+  connectedCallback() {
+    if (!this.rendered) {
+      this.render();
+      this.rendered = true;
+    }
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+}
+
+async function getData() {
+  try {
+    const response = await fetch("src/data/description.json");
+    const data = await response.json();
+
+    if (Array.isArray(data)) {
+      data.forEach((elem, index) => {
+        const petCard = document.getElementById(`pet-${index}`);
+        if (petCard) {
+          petCard.setAttribute("name", elem.name);
+          petCard.setAttribute("type", elem.type);
+          petCard.setAttribute("description", elem.description);
+          petCard.setAttribute("img-url", elem.url);
+        }
+      });
+    }
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 customElements.define("pet-card", PetCard);
+getData();
