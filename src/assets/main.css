@@ -130,15 +130,24 @@
 }
 
 .main-page__pets-slider-container {
-  width: 100%;
   display: flex;
+  max-width: 1200px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  column-gap: 12px;
+  row-gap: 20px;
 }
 
 .main-page__pets-slider {
   display: flex;
-  gap: 90px;
+  max-width: 990px;
+  column-gap: clamp(40px, 5vw, 90px);
+  overflow: hidden;
+}
+
+.main-page__pets-under-slider-buttons {
+  display: none;
 }
 
 /* main page help section */
@@ -275,7 +284,9 @@
 
   /* main page our pets section */
 
-  /* main page help section */
+  .main-page__pets {
+    padding: 80px 30px 100px;
+  }
 }
 
 /* main page header nav panel */
@@ -295,10 +306,38 @@
   }
 }
 
+/* main page help section */
 @media (max-width: 550px) {
   .main-page__help-icons {
     grid-template-columns: repeat(2, auto);
     gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* main page our pets section */
+  .main-page__pets {
+    padding: 42px 10px;
+    gap: 42px;
+  }
+
+  .main-page__pets-slider-container {
+    max-width: 270px;
+    flex-direction: column;
+  }
+
+  .main-page__pets-slider {
+    width: 100%;
+  }
+
+  .main-page__pets-slider-button {
+    display: none;
+  }
+
+  .main-page__pets-under-slider-buttons {
+    display: flex;
+    width: 270px;
+    justify-content: space-around;
   }
 }
 
