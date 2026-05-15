@@ -96,7 +96,8 @@ img {
   letter-spacing: normal;
 }
 
-.h3 {
+.h3,
+.h3-static {
   font-family: "Georgia";
   font-weight: normal;
   font-size: 35px;

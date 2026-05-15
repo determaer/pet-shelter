@@ -26,13 +26,15 @@ class PetCard extends HTMLElement {
         </div>
         <dialog id="${id}" class="card-modal-window">
           <div class="card-modal-window-content">
-            <img class="card-modal-img" src="${imgUrl}" alt="Pet photo"/>
+            <figure class="card-modal-img" >
+              <img src="${imgUrl}" alt="Pet photo"/>
+            </figure>
             <div class="card-modal-text">
               <div class="card-modal-text-title">
-                <h3 class="h3">${name}</h3>
+                <h3 class="h3-static">${name}</h3>
                 <h4 class="h4">${type}</h4>
               </div>
-              <h5 class="h5">${description}</h5>
+              <h5 class="h5 card-modal-description">${description}</h5>
               <ul class="h5 card-modal-list">
                 <li><strong>Age:</strong> 2 months</li>
                 <li><strong>Inoculations:</strong> none</li>
