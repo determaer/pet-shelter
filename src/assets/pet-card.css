@@ -1,0 +1,76 @@
+@import "base.css";
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 435px;
+  background: var(--color-light-s);
+  border-radius: 9px;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-name {
+  color: var(--color-dark-l);
+  font-family: "Georgia";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 6%;
+}
+
+.card-modal-window {
+  margin: auto;
+  position: relative;
+  overflow: visible;
+  border: none;
+  border-radius: 9px;
+  color: black;
+}
+
+.card-modal-window::backdrop {
+  background-color: var(--color-dark-3xl);
+  opacity: 60%;
+}
+
+.card-modal-window-content {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.card-modal-img {
+  width: 500px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.card-modal-text {
+  max-width: 400px;
+  padding: 50px 20px 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-modal-text-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-modal-list {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-modal-list li::marker {
+  color: var(--color-primary);
+}
+
+.card-modal-close-button {
+  position: absolute;
+  left: 100%;
+  transform: translateY(-100%);
+}
