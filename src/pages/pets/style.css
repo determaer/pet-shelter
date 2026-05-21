@@ -18,10 +18,12 @@
 
 .pets-page__header-logo-title {
   color: var(--color-dark-l);
+  cursor: url(../../assets/cursor/pointer.svg), auto;
 }
 
 .pets-page__header-logo-subtitle {
   text-align: center;
+  cursor: url(../../assets/cursor/pointer.svg), auto;
   color: var(--color-dark-3xl);
 }
 
@@ -120,7 +122,7 @@
   }
 
   .pets-page__nav-toggle:hover * {
-    cursor: url(cursor/pointer.svg), auto;
+    cursor: url(../../assets/cursor/pointer.svg), auto;
   }
 }
 

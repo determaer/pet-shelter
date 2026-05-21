@@ -9,22 +9,22 @@
   </head>
   <body>
     <header class="pets-page__header">
-      <strong class="pets-page__header-logo">
+      <a class="pets-page__header-logo" href="../main/index.html">
         <p class="logo-title pets-page__header-logo-title">Cozy House</p>
         <span class="logo-subtitle pets-page__header-logo-subtitle"
           >Shelter for pets in Boston</span
         >
-      </strong>
+      </a>
 
       <nav class="pets-page__nav">
-        <a class="p-l pets-page__nav-link" href="/index.html"
+        <a class="p-l pets-page__nav-link" href="../main/index.html"
           >About the shelter</a
         >
-        <a class="p-l pets-page__nav-link-selected" href="/our-pets.html"
-          >Our pets</a
+        <a class="p-l pets-page__nav-link-selected">Our pets</a>
+        <a class="p-l pets-page__nav-link" href="../main/index.html#help"
+          >Help the shelter</a
         >
-        <a class="p-l pets-page__nav-link">Help the shelter</a>
-        <a class="p-l pets-page__nav-link">Contacts</a>
+        <a class="p-l pets-page__nav-link" href="#contacts">Contacts</a>
       </nav>
       <button class="pets-page__nav-toggle" popovertarget="nav-panel-popover">
         <svg
@@ -58,16 +58,25 @@
         </button>
       </header>
       <nav class="popover__nav">
-        <a
-          class="p-mobile-menu popover__nav-link popover__nav-link-selected"
-          href="/index.html"
+        <a class="p-mobile-menu popover__nav-link" href="../main/index.html"
           >About the shelter</a
         >
-        <a class="p-mobile-menu popover__nav-link" href="/our-pets.html"
-          >Our pets</a
+        <a class="p-mobile-menu popover__nav-link-selected">Our pets</a>
+        <a
+          class="p-mobile-menu popover__nav-link"
+          href="../main/index.html#help"
+          >Help the shelter</a
         >
-        <a class="p-mobile-menu popover__nav-link">Help the shelter</a>
-        <a class="p-mobile-menu popover__nav-link">Contacts</a>
+        <a
+          class="p-mobile-menu popover__nav-link"
+          onclick="
+            {
+              document.getElementById('nav-panel-popover').hidePopover();
+              window.location.href = '#contacts';
+            }
+          "
+          >Contacts</a
+        >
       </nav>
     </div>
 
@@ -88,17 +97,17 @@
       </div>
       <div class="pets-page__pets-pagination">
         <button disabled class="button button-secondary button-short">
-          &lt&lt
+          &lt;&lt;
         </button>
         <button disabled class="button button-secondary button-short">
-          &lt
+          &lt;
         </button>
         <button class="button button-primary button-short">1</button>
-        <button class="button button-secondary button-short">&gt&gt</button>
-        <button class="button button-secondary button-short">&gt</button>
+        <button class="button button-secondary button-short">&gt;&gt;</button>
+        <button class="button button-secondary button-short">&gt;</button>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer-content">
         <div class="footer-content__contacts">
           <h3 class="h3 footer-contacts-title footer-title">

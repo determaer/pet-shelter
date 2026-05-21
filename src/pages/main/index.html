@@ -24,8 +24,10 @@
           <a class="p-l main-page__hero-nav-link" href="../pets/index.html"
             >Our pets</a
           >
-          <a class="p-l main-page__hero-nav-link">Help the shelter</a>
-          <a class="p-l main-page__hero-nav-link">Contacts</a>
+          <a class="p-l main-page__hero-nav-link" href="#help"
+            >Help the shelter</a
+          >
+          <a class="p-l main-page__hero-nav-link" href="#contacts">Contacts</a>
         </nav>
         <button
           class="main-page__hero-nav-toggle"
@@ -54,7 +56,11 @@
             extremely wide and open heart. He or she will love you more than
             anybody else in the world, you will see!
           </p>
-          <button class="button button-primary button-large">
+          <button
+            role="link"
+            class="button button-primary button-large"
+            onclick="window.location.href = '#pets'"
+          >
             <a href="#pets">Make a friend</a>
           </button>
         </div>
@@ -82,16 +88,35 @@
         </button>
       </header>
       <nav class="popover__nav">
-        <a
-          class="p-mobile-menu popover__nav-link popover__nav-link-selected"
-          href="/index.html"
+        <a class="p-mobile-menu popover__nav-link-selected"
           >About the shelter</a
         >
-        <a class="p-mobile-menu popover__nav-link" href="/our-pets.html"
+        <a
+          class="p-mobile-menu popover__nav-link"
+          popovertarget="nav-panel-popover"
+          href="../pets/index.html"
           >Our pets</a
         >
-        <a class="p-mobile-menu popover__nav-link">Help the shelter</a>
-        <a class="p-mobile-menu popover__nav-link">Contacts</a>
+        <a
+          class="p-mobile-menu popover__nav-link"
+          onclick="
+            {
+              document.getElementById('nav-panel-popover').hidePopover();
+              window.location.href = '#help';
+            }
+          "
+          >Help the shelter</a
+        >
+        <a
+          class="p-mobile-menu popover__nav-link"
+          onclick="
+            {
+              document.getElementById('nav-panel-popover').hidePopover();
+              window.location.href = '#contacts';
+            }
+          "
+          >Contacts</a
+        >
       </nav>
     </div>
 
@@ -185,7 +210,11 @@
             </button>
           </div>
         </div>
-        <button class="button button-primary button-large">
+        <button
+          role="link"
+          onclick="window.location.href = '../pets/index.html'"
+          class="button button-primary button-large"
+        >
           <a href="../pets/index.html">Get to know the rest</a>
         </button>
       </section>
@@ -305,7 +334,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer-content">
         <div class="footer-content__contacts">
           <h3 class="h3 footer-contacts-title footer-title">

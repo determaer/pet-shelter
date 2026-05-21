@@ -327,14 +327,15 @@ body:has(.popover:popover-open) :is(#main-page, footer) {
   text-align: center;
   color: var(--color-dark-s);
   width: fit-content;
+  position: relative;
 }
 
 .popover__nav-link-selected {
-  position: relative;
+  pointer-events: none;
   color: var(--color-light-s);
 }
 
-.popover__nav-link-selected::after {
+.popover__nav-link:hover::after {
   content: "";
   position: absolute;
   left: 0;
