@@ -11,6 +11,14 @@ export async function getData() {
           petCard.setAttribute("type", elem.type);
           petCard.setAttribute("description", elem.description);
           petCard.setAttribute("img-url", elem.img);
+          petCard.setAttribute("breed", elem.breed);
+          petCard.setAttribute("age", elem.age);
+          petCard.setAttribute(
+            "inoculations",
+            JSON.stringify(elem.inoculations),
+          );
+          petCard.setAttribute("diseases", JSON.stringify(elem.diseases));
+          petCard.setAttribute("parasites", JSON.stringify(elem.parasites));
         }
       });
     }

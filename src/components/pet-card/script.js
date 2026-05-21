@@ -2,9 +2,35 @@ export class PetCard extends HTMLElement {
   render() {
     const name = this.getAttribute("name") || "Имя не указано";
     const type = this.getAttribute("type") || "type не указано";
+    const breed = this.getAttribute("breed") || "breed не указано";
     const description =
       this.getAttribute("description") || "description не указано";
     const imgUrl = this.getAttribute("img-url") || "";
+
+    const age = this.getAttribute("age") || "age не указано";
+
+    let inoculations = "inoculations не указано";
+    let diseases = "diseases не указано";
+    let parasites = "parasites не указано";
+
+    try {
+      const inoculationsArr = JSON.parse(this.getAttribute("inoculations"));
+      const diseasesArr = JSON.parse(this.getAttribute("diseases"));
+      const parasitesArr = JSON.parse(this.getAttribute("parasites"));
+
+      if (Array.isArray(inoculationsArr)) {
+        inoculations = inoculationsArr.join(", ");
+      }
+      if (Array.isArray(diseasesArr)) {
+        diseases = diseasesArr.join(", ");
+      }
+      if (Array.isArray(parasitesArr)) {
+        parasites = parasitesArr.join(", ");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+
     const id = crypto.randomUUID();
 
     this.innerHTML = `
@@ -28,14 +54,14 @@ export class PetCard extends HTMLElement {
             <div class="card-modal-text">
               <div class="card-modal-text-title">
                 <h3 class="h3-static">${name}</h3>
-                <h4 class="h4">${type}</h4>
+                <h4 class="h4">${type} - ${breed}</h4>
               </div>
               <h5 class="h5 card-modal-description">${description}</h5>
               <ul class="h5 card-modal-list">
-                <li><strong>Age:</strong> 2 months</li>
-                <li><strong>Inoculations:</strong> none</li>
-                <li><strong>Diseases:</strong> none</li>
-                <li><strong>Parasites:</strong> none</li>
+                <li><strong>Age: </strong>${age}</li>
+                <li><strong>Inoculations: </strong>${inoculations}</li>
+                <li><strong>Diseases: </strong>${diseases}</li>
+                <li><strong>Parasites: </strong>${parasites}</li>
               </ul>
             </div>
             <button 
@@ -52,7 +78,17 @@ export class PetCard extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["name", "type", "description", "img-url"];
+    return [
+      "name",
+      "type",
+      "breed",
+      "description",
+      "img-url",
+      "age",
+      "inoculations",
+      "diseases",
+      "parasites",
+    ];
   }
 
   connectedCallback() {
