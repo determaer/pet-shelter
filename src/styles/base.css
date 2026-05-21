@@ -6,6 +6,10 @@
   cursor: url(../assets/cursor/default.svg), auto;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body:has(dialog[open]) {
   overflow: hidden;
 }
