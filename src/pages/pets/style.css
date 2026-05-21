@@ -33,14 +33,15 @@
 
 .pets-page__nav-link {
   color: var(--color-dark-l);
+  position: relative;
 }
 
 .pets-page__nav-link-selected {
-  position: relative;
   color: var(--color-dark-3xl);
+  pointer-events: none;
 }
 
-.pets-page__nav-link-selected::after {
+.pets-page__nav-link:hover::after {
   content: "";
   position: absolute;
   left: 0;

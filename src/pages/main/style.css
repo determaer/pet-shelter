@@ -44,15 +44,16 @@
 }
 
 .main-page__hero-nav-link {
+  position: relative;
   color: var(--color-dark-s);
 }
 
 .main-page__hero-nav-link-selected {
-  position: relative;
   color: var(--color-light-xl);
+  pointer-events: none;
 }
 
-.main-page__hero-nav-link-selected::after {
+.main-page__hero-nav-link:hover::after {
   content: "";
   position: absolute;
   left: 0;
