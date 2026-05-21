@@ -1,0 +1,133 @@
+@import "../../styles/base.css";
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 435px;
+  background: var(--color-light-s);
+  border-radius: 9px;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-name {
+  color: var(--color-dark-l);
+  font-family: "Georgia";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: 6%;
+}
+
+.card-modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  overflow: visible;
+  border: none;
+  border-radius: 9px;
+  color: black;
+}
+
+.card-modal-window::backdrop {
+  background-color: var(--color-dark-3xl);
+  opacity: 60%;
+}
+
+.card-modal-window-content {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.card-modal-img {
+  display: flex;
+  width: -moz-available;
+  width: stretch;
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+
+.card-modal-img img {
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  align-self: center;
+  width: 100%;
+}
+
+.card-modal-text {
+  max-width: 400px;
+  max-height: 500px;
+  padding: 50px 20px 90px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-modal-text-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-modal-list {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-modal-list li::marker {
+  color: var(--color-primary);
+}
+
+.card-modal-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% - 10px), -100%);
+}
+
+@media (max-width: 950px) {
+  .card-modal-text {
+    padding: 10px 9px 37px 11px;
+    gap: 20px;
+    max-width: 280px;
+  }
+
+  .card-modal-description {
+    font-size: 13px;
+  }
+
+  .card-modal-list {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 720px) {
+  .card-modal-window-content {
+    display: block;
+  }
+
+  .card-modal-img {
+    display: none;
+  }
+
+  .card-modal-text {
+    padding: 10px;
+    max-width: 240px;
+  }
+
+  .card-modal-text-title {
+    text-align: center;
+  }
+
+  .card-modal-description {
+    text-align: justify;
+  }
+
+  .card-modal-close-button {
+    transform: translate(calc(100% - 20px), -100%);
+  }
+}

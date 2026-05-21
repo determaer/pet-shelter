@@ -1,0 +1,141 @@
+@import "../../styles/base.css";
+
+/*pets page header*/
+
+.pets-page__header {
+  height: 120px;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pets-page__header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: normal;
+}
+
+.pets-page__header-logo-title {
+  color: var(--color-dark-l);
+  cursor: url(../../assets/cursor/pointer.svg), auto;
+}
+
+.pets-page__header-logo-subtitle {
+  text-align: center;
+  cursor: url(../../assets/cursor/pointer.svg), auto;
+  color: var(--color-dark-3xl);
+}
+
+.pets-page__nav {
+  display: flex;
+  gap: 35px;
+  padding: 16px 0 20px;
+}
+
+.pets-page__nav-link {
+  color: var(--color-dark-l);
+  position: relative;
+}
+
+.pets-page__nav-link-selected {
+  color: var(--color-dark-3xl);
+  pointer-events: none;
+}
+
+.pets-page__nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.pets-page__nav-toggle {
+  display: none;
+}
+
+/* pets page main */
+
+.pets-page__pets {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center;
+  padding: 80px 40px 100px;
+  background-color: var(--color-light-l);
+}
+
+.pets-page__pets-header {
+  max-width: 400px;
+  color: var(--color-dark-l);
+  text-align: center;
+}
+
+.pets-page__pets-table {
+  padding: 15px 0;
+  display: flex;
+  max-width: 1200px;
+  max-height: 1365px;
+  overflow: hidden;
+  gap: 30px 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pets-page__pets-pagination {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .pets-page__pets {
+    padding: 80px 30px 76px;
+    gap: 30px;
+  }
+
+  .pets-page__header {
+    padding: 30px;
+  }
+
+  .pets-page__pets-table {
+    padding: 0;
+  }
+
+  .pets-page__pets-pagination {
+    margin-top: 10px;
+  }
+}
+
+/* main page header nav panel */
+@media (max-width: 700px) {
+  .pets-page__nav {
+    display: none;
+  }
+
+  .pets-page__nav-toggle {
+    display: initial;
+    background: none;
+    border: 0;
+  }
+
+  .pets-page__nav-toggle:hover * {
+    cursor: url(../../assets/cursor/pointer.svg), auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .pets-page__pets-pagination {
+    margin: 0;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pets-page__pets {
+    padding: 42px 10px;
+    gap: 42px;
+  }
+}

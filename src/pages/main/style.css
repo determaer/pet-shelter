@@ -1,0 +1,437 @@
+@import "../../styles/base.css";
+
+/*main page start screen*/
+
+.main-page__hero {
+  padding: 30px 40px 0px 40px;
+  display: flex;
+  gap: 90px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--start-screen-gradient-background);
+}
+
+.main-page__hero-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-page__hero-header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: normal;
+}
+
+.main-page__hero-header-logo-title {
+  color: var(--color-primary);
+}
+
+.main-page__hero-header-logo-subtitle {
+  text-align: center;
+  color: var(--color-light-xl);
+}
+
+.main-page__hero-nav {
+  display: flex;
+  gap: 35px;
+  padding: 16px 0 20px;
+}
+
+.main-page__hero-nav-toggle {
+  display: none;
+}
+
+.main-page__hero-nav-link {
+  position: relative;
+  color: var(--color-dark-s);
+}
+
+.main-page__hero-nav-link-selected {
+  color: var(--color-light-xl);
+  pointer-events: none;
+}
+
+.main-page__hero-nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.main-page__hero-start {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+}
+
+.main-page__hero-content {
+  align-self: center;
+  display: flex;
+  gap: 42px;
+  max-width: 460px;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.main-page__hero-content-greeting {
+  width: 70%;
+  color: var(--color-light-xl);
+}
+
+.main-page__hero-content-description {
+  color: var(--color-dark-s);
+}
+
+/* main page about section */
+
+.main-page__about {
+  background-color: var(--color-light-xl);
+  padding: 80px 40px 100px;
+  display: flex;
+  justify-content: center;
+  column-gap: 120px;
+}
+
+.main-page__about-content {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.main-page__about-content-header {
+  max-width: 370px;
+  color: var(--color-dark-l);
+}
+
+.main-page__about-content-text {
+  color: var(--color-dark-xl);
+}
+
+/* main page pets section */
+
+.main-page__pets {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  padding: 80px 40px 100px;
+  background-color: var(--color-light-l);
+  align-items: center;
+}
+
+.main-page__pets-header {
+  text-align: center;
+  max-width: 400px;
+  color: var(--color-dark-l);
+}
+
+.main-page__pets-slider-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 20px;
+}
+
+.main-page__pets-slider {
+  display: flex;
+  max-width: 990px;
+  column-gap: clamp(40px, 5vw, 90px);
+  overflow: hidden;
+}
+
+.main-page__pets-under-slider-buttons {
+  display: none;
+}
+
+/* main page help section */
+
+.main-page__help {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  padding: 80px 40px 100px;
+  align-items: center;
+}
+
+.main-page__help-header {
+  color: var(--color-dark-l);
+  text-align: center;
+}
+
+.main-page__help-icons {
+  list-style: none;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  row-gap: 55px;
+  justify-content: center;
+}
+
+.main-page__help-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  color: var(--color-dark-l);
+}
+
+.main-page__help-icon img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+/* main page donation section */
+
+.main-page__donation {
+  padding: 80px 0px 100px;
+  display: flex;
+  background-color: var(--color-light-l);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page__donation-image {
+  width: 100%;
+  max-width: 505px;
+}
+
+.main-page__donation-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  gap: 30px;
+}
+
+.main-page__donation-header {
+  color: var(--color-dark-l);
+}
+
+.main-page__donation-bank-name {
+  color: var(--color-dark-l);
+}
+
+.main-page__donation-credit-card {
+  display: flex;
+  width: fit-content;
+  min-width: 281px;
+  gap: 15px;
+  padding: 10px 15px;
+  color: var(--color-dark-l);
+  background-color: var(--color-primary);
+  border-radius: 9px;
+  white-space: nowrap;
+}
+
+.main-page__donation-legal-info {
+  color: var(--color-dark-m);
+}
+
+@media (max-width: 900px) {
+  .main-page__help-icons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 60px;
+  }
+
+  .main-page__donation {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px), (orientation: portrait) {
+  /*main page start screen*/
+  .main-page__hero {
+    padding: 30px 30px 0;
+    gap: 60px;
+  }
+
+  .main-page__hero-start {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .main-page__hero-content {
+    margin: 0;
+  }
+
+  .main-page__hero-start img {
+    width: 80%;
+    align-self: flex-end;
+  }
+
+  .main-page__hero-content button {
+    align-self: center;
+  }
+
+  /* main page about section */
+  .main-page__about {
+    padding: 80px 10px 100px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+  }
+
+  /* main page our pets section */
+
+  .main-page__pets {
+    padding: 80px 30px 100px;
+  }
+}
+
+/* main page header nav panel */
+@media (max-width: 700px) {
+  .main-page__hero-nav {
+    display: none;
+  }
+
+  .main-page__hero-nav-toggle {
+    display: initial;
+    background: none;
+    border: 0;
+  }
+
+  .main-page__hero-nav-toggle:hover * {
+    cursor: url(../../assets/cursor/pointer.svg), auto;
+  }
+}
+
+/* main page help section */
+@media (max-width: 550px) {
+  .main-page__help-icons {
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* main page our pets section */
+  .main-page__pets {
+    padding: 42px 10px;
+    gap: 42px;
+  }
+
+  .main-page__pets-slider-container {
+    max-width: 270px;
+    flex-direction: column;
+  }
+
+  .main-page__pets-slider {
+    width: 100%;
+  }
+
+  .main-page__pets-slider-button {
+    display: none;
+  }
+
+  .main-page__pets-under-slider-buttons {
+    display: flex;
+    width: 270px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-page__donation {
+    padding: 42px 20px;
+  }
+  .main-page__donation-text {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .main-page__donation-credit-card .h4 {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 6%;
+  }
+
+  .main-page__donation-bank-name {
+    line-height: 160%;
+    letter-spacing: 0;
+  }
+
+  .main-page__donation-legal-info {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 320px) {
+  /*main page start screen*/
+  .main-page__hero {
+    padding: 30px 10px 0;
+  }
+
+  .main-page__hero-header {
+    padding: 0 10px;
+  }
+
+  .main-page__hero-start {
+    gap: 105px;
+  }
+
+  .main-page__hero-content {
+    max-width: 300px;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-page__hero-start img {
+    width: 87%;
+    align-self: center;
+  }
+  /* main page about section */
+
+  .main-page__about {
+    padding: 42px 25px;
+    gap: 42px;
+  }
+
+  .main-page__about-content-header {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .main-page__about-content-text {
+    text-align: justify;
+  }
+
+  .main-page__about-image {
+    padding: 0 5px;
+    width: 100%;
+  }
+
+  /* main page help section */
+  .main-page__help {
+    padding: 42px 15px;
+    gap: 42px;
+  }
+
+  .main-page__help-icon {
+    gap: 20px;
+  }
+
+  .main-page__help-icon img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .main-page__help-icon figcaption {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 6%;
+  }
+}
