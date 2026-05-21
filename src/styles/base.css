@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url(cursor/default.svg), auto;
+  cursor: url(../assets/cursor/default.svg), auto;
 }
 
 body:has(dialog[open]) {
@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  cursor: url(cursor/pointer.svg), auto;
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 
 img {
@@ -65,7 +65,7 @@ img {
 }
 
 .button:hover {
-  cursor: url(cursor/pointer.svg), auto;
+  cursor: url(../assets/cursor/pointer.svg), auto;
   background-color: var(--color-primary-light);
 }
 
@@ -79,7 +79,7 @@ img {
 
 .button:disabled {
   cursor:
-    url(cursor/not-allowed.svg) 3 3,
+    url(../assets/cursor/not-allowed.svg) 3 3,
     auto;
 }
 
@@ -296,7 +296,7 @@ body:has(.popover:popover-open) :is(#main-page, footer) {
 }
 
 .popover__close-button * {
-  cursor: url(cursor/pointer.svg), auto;
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 
 .popover__header {

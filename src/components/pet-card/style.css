@@ -1,4 +1,4 @@
-@import "base.css";
+@import "../../styles/base.css";
 .card {
   display: flex;
   flex-direction: column;
